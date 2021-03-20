@@ -26,4 +26,19 @@ where companies.name=employees.Company)
 where date&lt;&quot;2000&quot;;
 
 SELECT Company from companies,employees
-where (companies.name=employees.Company AND employees.Role=&quot;Graphic Designer&quot;);</sql><current_tab id="0"/></tab_sql></sqlb_project>
+where (companies.name=employees.Company AND employees.Role=&quot;Graphic Designer&quot;);
+
+select name from students 
+where Points in 
+(select max(points) from students);
+
+select avg(points) as average from students;
+
+select count(name) as numberStud from students 
+where Points =500 ;
+
+select name from students 
+where name LIKE '%s%';
+
+select name from students
+order by Points DESC ;</sql><current_tab id="0"/></tab_sql></sqlb_project>
