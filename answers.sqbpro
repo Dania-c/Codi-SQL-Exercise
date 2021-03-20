@@ -17,4 +17,13 @@ UPDATE graduates
 SET Graduation=&quot;08/09/2018&quot;
 WHERE name=&quot;Layal&quot;;
 DELETE from students  
-WHERE name=&quot;Layal&quot;;</sql><current_tab id="0"/></tab_sql></sqlb_project>
+WHERE name=&quot;Layal&quot;;
+SELECT employees.name,employees.Company,companies.date from companies,employees
+where companies.name=employees.Company;
+select name from 
+(SELECT employees.name,employees.Company,companies.date from companies,employees
+where companies.name=employees.Company)
+where date&lt;&quot;2000&quot;;
+
+SELECT Company from companies,employees
+where (companies.name=employees.Company AND employees.Role=&quot;Graphic Designer&quot;);</sql><current_tab id="0"/></tab_sql></sqlb_project>
